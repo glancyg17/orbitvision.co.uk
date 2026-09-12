@@ -1,0 +1,19 @@
+# OrbitVision
+
+> OrbitVision provides telecommunications and IT installation services based in Glenrothes, Fife, Scotland, serving homes, businesses and farms across the UK.
+
+## Services
+- Satellite broadband installation (Starlink and Amazon Leo / Project Kuiper)
+- Business broadband and cloud communications
+- Data cabling and on-premise communication systems
+- CCTV and access control
+- Managed I.T. services
+- Installation and ongoing maintenance
+
+## Coverage
+UK-wide, with particular focus on rural, remote and agricultural sites as well as urban business premises.
+
+## Contact
+- Phone / WhatsApp: 07473 782932
+- Email: uplink@orbitvision.co.uk
+- Hours: Mon–Thu 9:00–17:30, Fri 9:00–15:00, Sat–Sun on-call only
