@@ -11,7 +11,7 @@
 <meta property="og:description" content="Satellite broadband, business connectivity, CCTV and managed IT — Fife-based, UK-wide.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://orbitvision.co.uk/">
-<meta property="og:image" content="https://orbitvision.co.uk/assets/logo.png">
+<meta property="og:image" content="https://orbitvision.co.uk/assets/logo-full.png">
 <meta name="twitter:card" content="summary">
 <link rel="icon" type="image/png" href="/assets/favicon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -24,8 +24,7 @@
 <header class="site-header">
   <div class="wrap header-row">
     <a class="brand" href="/">
-      <span class="brand-badge"><img src="/assets/logo.png" alt="" width="34" height="34"></span>
-      <span class="brand-name">OrbitVision</span>
+      <img src="/assets/logo-header.png" alt="OrbitVision — IT solutions and technology" height="34">
     </a>
     <nav class="main-nav" id="main-nav" aria-label="Primary">
       <a href="#services">Services</a>
@@ -34,9 +33,9 @@
       <a href="#contact">Contact</a>
     </nav>
     <div style="display:flex; align-items:center; gap:10px;">
-      <a class="nav-call" href="tel:+447473782932">
+      <a class="nav-call" href="tel:+447473782932" aria-label="Call 07473 782932">
         <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-        07473 782932
+        <span class="nav-call-text">07473 782932</span>
       </a>
       <button class="nav-toggle" id="nav-toggle" aria-expanded="false" aria-controls="main-nav" aria-label="Open menu">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
@@ -47,9 +46,37 @@
 
 <main id="main">
 
-  <section class="hero">
-    <div class="wrap hero-grid">
-      <div>
+  <section class="hero" id="hero">
+    <div class="hero-bg" aria-hidden="true">
+      <div class="orbit-layer" id="orbit-layer">
+        <div class="orbit-ring outer"></div>
+        <div class="orbit-ring inner"></div>
+      </div>
+      <div class="hero-stars" id="hero-stars"></div>
+      <svg class="hero-dish" viewBox="0 0 400 280" preserveAspectRatio="xMidYMax slice">
+        <path d="M-20 220 L60 200 L140 212 L220 190 L300 205 L420 185 L420 280 L-20 280 Z" fill="#0A1628"/>
+        <line x1="230" y1="150" x2="230" y2="200" stroke="#93A9C0" stroke-width="3"/>
+        <line x1="212" y1="200" x2="248" y2="200" stroke="#93A9C0" stroke-width="3"/>
+        <line x1="212" y1="200" x2="230" y2="170" stroke="#93A9C0" stroke-width="3"/>
+        <line x1="248" y1="200" x2="230" y2="170" stroke="#93A9C0" stroke-width="3"/>
+        <ellipse cx="230" cy="148" rx="24" ry="9" fill="#EAF3FA" transform="rotate(-18 230 148)"/>
+      </svg>
+      <svg class="hero-orbit-path" viewBox="0 0 900 500" preserveAspectRatio="xMidYMax slice">
+        <defs>
+          <filter id="sat-glow" x="-80%" y="-80%" width="260%" height="260%">
+            <feGaussianBlur stdDeviation="4.5" result="blur"/>
+            <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+          </filter>
+        </defs>
+        <path d="M 30 440 Q 450 60 870 440" fill="none" stroke="#2FA8E8" stroke-width="1" stroke-dasharray="2 9" opacity="0.35"/>
+        <circle r="4" fill="#2FA8E8" filter="url(#sat-glow)">
+          <animateMotion dur="8s" repeatCount="indefinite" path="M 30 440 Q 450 60 870 440"/>
+        </circle>
+      </svg>
+      <div class="hero-vignette"></div>
+    </div>
+    <div class="wrap">
+      <div class="hero-content">
         <h1>Connectivity from<br><span>orbit to your door</span></h1>
         <p class="lede">Starlink and Amazon Leo satellite installs, business broadband, data cabling, CCTV and managed IT — for homes, businesses and farms across Fife and the UK.</p>
         <div class="hero-ctas">
@@ -57,27 +84,13 @@
           <a class="btn btn-secondary" href="https://wa.me/447473782932?text=Hi%2C%20I%27d%20like%20to%20know%20more%20about%20your%20services." target="_blank" rel="noopener">Message on WhatsApp</a>
         </div>
       </div>
-      <div class="hero-art" aria-hidden="true">
-        <svg viewBox="0 0 400 280" preserveAspectRatio="xMidYMid meet">
-          <path d="M-20 220 L60 200 L140 212 L220 190 L300 205 L420 185 L420 280 L-20 280 Z" fill="#0A1628"/>
-          <line x1="230" y1="150" x2="230" y2="200" stroke="#93A9C0" stroke-width="3"/>
-          <line x1="212" y1="200" x2="248" y2="200" stroke="#93A9C0" stroke-width="3"/>
-          <line x1="212" y1="200" x2="230" y2="170" stroke="#93A9C0" stroke-width="3"/>
-          <line x1="248" y1="200" x2="230" y2="170" stroke="#93A9C0" stroke-width="3"/>
-          <ellipse cx="230" cy="148" rx="24" ry="9" fill="#EAF3FA" transform="rotate(-18 230 148)"/>
-          <path d="M 10 260 Q 200 40 390 260" fill="none" stroke="#2FA8E8" stroke-width="1" stroke-dasharray="3 6" opacity="0.4"/>
-          <circle r="4" fill="#2FA8E8">
-            <animateMotion dur="6s" repeatCount="indefinite" path="M 10 260 Q 200 40 390 260"/>
-          </circle>
-        </svg>
-      </div>
     </div>
   </section>
 
   <section class="section-ice" id="services">
     <div class="wrap">
       <h2 class="eyebrow-free-heading">What we do</h2>
-      <p class="section-lede">Six services, one team. Everything is installed and supported by the same local engineers — no call centres, no subcontracting.</p>
+      <p class="section-lede">Every service, one team. Everything is installed and supported by the same local engineers — no call centres, no subcontracting.</p>
       <div class="service-list">
         <div class="service-item">
           <h3>Satellite broadband</h3>
@@ -110,14 +123,14 @@
   <section class="section-navy" id="coverage">
     <div class="wrap coverage-grid">
       <div class="coverage-art" aria-hidden="true">
-        <svg viewBox="0 0 300 340">
-          <path d="M120 20 L150 10 L165 30 L200 25 L210 55 L195 75 L215 95 L200 130 L225 150 L210 180 L230 210 L200 240 L205 270 L170 290 L160 320 L120 310 L100 280 L70 285 L55 250 L75 220 L55 190 L75 160 L60 130 L85 100 L75 70 L100 50 L95 25 Z"
-            fill="none" stroke="#2FA8E8" stroke-width="2" opacity="0.85"/>
-          <circle cx="118" cy="70" r="5" fill="#2FA8E8"/>
-          <circle cx="150" cy="150" r="5" fill="#2FA8E8"/>
-          <circle cx="120" cy="230" r="5" fill="#2FA8E8"/>
-          <circle cx="170" cy="260" r="7" fill="#EAF3FA"/>
-          <text x="178" y="264" fill="#EAF3FA" font-size="13" font-family="IBM Plex Mono, monospace">Glenrothes</text>
+        <svg viewBox="0 0 300 481">
+          <path d="M 192.4 171.2 L 163.0 179.8 L 156.7 177.4 L 148.4 181.6 L 118.4 175.6 L 117.2 181.7 L 113.4 186.6 L 113.8 190.0 L 110.4 194.1 L 110.5 200.4 L 103.2 202.1 L 102.5 205.3 L 105.4 209.3 L 105.1 212.7 L 101.6 212.3 L 99.4 223.1 L 86.8 230.8 L 88.0 249.4 L 85.8 255.0 L 86.5 263.2 L 85.5 266.4 L 83.5 268.3 L 82.3 263.2 L 83.5 250.4 L 81.7 250.5 L 77.0 259.7 L 78.6 254.2 L 77.5 250.1 L 71.6 240.9 L 63.8 246.2 L 65.6 251.1 L 64.8 254.0 L 62.9 253.5 L 62.0 249.3 L 56.1 248.0 L 55.1 255.4 L 53.5 254.9 L 50.7 259.9 L 50.3 263.2 L 52.9 267.1 L 61.0 270.0 L 70.5 284.7 L 80.3 283.4 L 79.0 289.5 L 80.2 292.3 L 87.8 289.1 L 83.4 300.5 L 87.6 303.1 L 71.6 311.3 L 71.8 314.7 L 74.7 316.9 L 68.6 320.0 L 67.6 324.7 L 62.6 329.9 L 62.0 332.9 L 67.7 330.7 L 65.6 333.8 L 73.5 334.1 L 71.9 335.5 L 72.3 338.4 L 63.1 338.9 L 62.4 344.5 L 70.3 347.2 L 90.1 342.4 L 97.0 333.0 L 101.0 332.0 L 98.1 333.6 L 92.6 344.0 L 87.2 348.0 L 90.4 349.8 L 89.7 354.5 L 85.1 357.1 L 79.2 366.8 L 63.4 371.7 L 60.1 386.9 L 64.5 388.7 L 68.0 385.5 L 69.5 388.4 L 67.3 394.5 L 70.1 395.8 L 81.5 389.7 L 81.4 381.3 L 84.5 379.6 L 95.0 357.6 L 90.2 369.2 L 93.3 373.7 L 92.5 376.6 L 94.2 381.9 L 87.7 387.0 L 90.8 395.3 L 90.2 402.9 L 87.7 406.7 L 88.4 415.2 L 99.2 416.7 L 101.2 408.6 L 99.9 405.0 L 103.1 392.2 L 104.5 393.6 L 105.5 402.3 L 109.5 405.9 L 116.7 405.3 L 117.5 395.3 L 115.3 387.8 L 108.6 381.3 L 109.9 377.4 L 122.1 386.9 L 124.2 391.2 L 129.6 392.7 L 131.8 399.7 L 111.2 436.6 L 111.6 445.4 L 116.4 451.1 L 119.1 459.8 L 123.4 463.0 L 126.3 462.7 L 126.3 457.8 L 124.2 455.2 L 123.6 450.0 L 125.8 447.8 L 142.9 460.3 L 145.3 457.4 L 145.5 448.6 L 150.9 453.7 L 157.6 453.5 L 169.1 446.0 L 173.3 446.0 L 175.8 439.5 L 193.1 437.6 L 194.8 433.0 L 193.9 431.4 L 197.2 431.8 L 207.3 422.9 L 212.6 413.0 L 226.4 404.1 L 227.5 402.0 L 221.1 390.6 L 225.1 389.7 L 233.2 377.0 L 226.7 368.2 L 212.8 362.6 L 211.8 359.3 L 200.3 360.2 L 197.8 365.0 L 193.3 366.9 L 186.3 362.3 L 192.0 361.8 L 190.7 357.3 L 198.4 350.6 L 203.8 351.7 L 212.8 344.2 L 204.4 339.2 L 204.6 332.0 L 215.5 322.4 L 215.3 317.8 L 227.1 301.0 L 227.1 295.7 L 233.1 283.1 L 231.8 280.1 L 235.5 271.0 L 243.4 260.8 L 241.3 248.9 L 237.5 244.0 L 230.3 241.3 L 218.0 243.6 L 201.0 241.5 L 194.4 244.4 L 184.5 240.0 L 176.4 241.5 L 174.8 244.4 L 167.3 245.6 L 162.7 249.6 L 156.1 249.6 L 166.1 235.7 L 168.0 230.2 L 159.3 231.1 L 159.3 226.2 L 182.1 204.8 L 190.8 199.9 L 195.4 189.3 L 192.2 185.7 L 195.9 179.4 L 196.1 175.6 L 192.4 171.2 Z M 71.6 184.4 L 58.1 196.0 L 42.2 203.6 L 38.7 208.9 L 37.6 216.6 L 40.6 218.5 L 35.8 219.2 L 40.5 225.0 L 46.5 227.4 L 41.7 227.2 L 39.7 230.2 L 42.3 232.4 L 36.6 234.4 L 40.0 237.0 L 38.5 239.5 L 39.8 241.0 L 39.0 244.2 L 36.1 236.8 L 33.4 235.0 L 32.9 238.1 L 35.3 240.1 L 34.3 241.9 L 32.0 240.3 L 29.8 244.4 L 24.8 244.7 L 20.2 249.8 L 28.4 256.1 L 28.0 264.1 L 26.4 265.3 L 27.8 270.6 L 25.6 276.0 L 27.2 283.5 L 29.9 286.2 L 23.0 291.1 L 18.0 308.7 L 20.6 308.4 L 20.6 305.3 L 24.5 302.7 L 25.1 299.4 L 27.0 300.1 L 26.5 297.8 L 35.5 286.8 L 34.6 278.0 L 36.8 269.3 L 35.6 266.8 L 41.8 247.1 L 45.9 241.1 L 57.6 232.1 L 56.6 228.9 L 64.4 226.3 L 68.8 220.8 L 68.4 210.0 L 73.6 209.6 L 77.3 203.6 L 69.9 205.3 L 76.1 197.0 L 74.5 195.1 L 75.9 191.6 L 75.2 188.1 L 71.6 184.4 Z M 276.9 18.0 L 273.6 21.8 L 272.2 27.2 L 266.4 27.7 L 266.5 31.2 L 263.8 36.5 L 264.3 42.3 L 260.4 42.0 L 261.7 32.5 L 255.2 34.6 L 254.6 38.1 L 250.4 39.4 L 247.1 45.3 L 253.6 47.6 L 254.9 50.8 L 253.4 54.9 L 250.3 57.2 L 242.9 55.0 L 245.7 63.4 L 253.3 68.7 L 256.8 68.3 L 258.3 79.2 L 256.7 87.1 L 259.5 90.8 L 261.8 90.6 L 262.7 81.1 L 266.7 80.0 L 263.7 77.7 L 265.9 77.6 L 265.1 71.8 L 271.9 70.5 L 272.3 68.3 L 269.5 65.0 L 266.1 64.2 L 269.0 60.6 L 267.7 58.7 L 269.1 56.2 L 267.8 55.2 L 277.8 56.1 L 275.7 51.4 L 270.2 52.5 L 269.2 50.7 L 270.6 46.4 L 267.8 47.6 L 271.4 44.8 L 273.3 36.9 L 277.2 40.1 L 281.7 36.7 L 277.5 33.6 L 278.1 28.9 L 282.0 21.7 L 276.9 18.0 Z M 217.7 121.8 L 216.4 123.4 L 217.4 127.6 L 209.4 128.1 L 209.8 130.8 L 207.9 133.1 L 202.6 131.6 L 200.7 128.4 L 200.7 121.8 L 192.9 125.4 L 192.2 127.2 L 193.7 131.2 L 198.2 132.5 L 201.5 137.1 L 200.3 144.2 L 199.0 143.7 L 200.4 138.3 L 194.9 135.4 L 182.3 139.5 L 180.7 146.2 L 181.5 154.4 L 178.8 155.5 L 177.8 159.8 L 185.1 167.6 L 188.8 167.4 L 192.2 166.2 L 194.2 160.3 L 191.3 160.3 L 190.8 157.8 L 195.7 156.2 L 197.2 158.6 L 194.2 164.8 L 195.1 169.6 L 200.6 169.9 L 199.7 166.8 L 205.5 158.2 L 210.2 158.0 L 207.6 156.0 L 208.0 151.6 L 204.3 149.5 L 204.9 142.4 L 207.5 146.1 L 214.3 146.1 L 215.3 143.4 L 210.6 136.4 L 215.4 136.1 L 216.2 132.8 L 221.5 131.2 L 218.8 129.0 L 220.9 123.3 L 217.7 121.8 Z M 64.8 313.6 L 51.5 324.9 L 42.6 327.6 L 43.6 332.0 L 47.2 333.6 L 54.1 327.9 L 54.4 324.9 L 61.1 322.9 L 64.8 313.6 Z M 68.9 288.5 L 63.5 292.1 L 70.3 297.7 L 72.6 291.3 L 68.9 288.5 Z"
+            fill="rgba(47,168,232,0.14)" stroke="#2FA8E8" stroke-width="1.6" stroke-linejoin="round"/>
+          <circle cx="138.7" cy="271.7" r="4" fill="#2FA8E8"/>
+          <circle cx="106.3" cy="332.2" r="4" fill="#2FA8E8"/>
+          <circle cx="205.3" cy="396.3" r="4" fill="#2FA8E8"/>
+          <circle cx="188.3" cy="350.1" r="7" fill="#EAF3FA"/>
+          <text x="198" y="354" fill="#EAF3FA" font-size="13" font-family="IBM Plex Mono, monospace">Glenrothes</text>
         </svg>
       </div>
       <div>
